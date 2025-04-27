@@ -1,0 +1,155 @@
+:root {
+    --37signals-primary-text-color: white;
+    --37signals-secondary-text-color: rgb(150, 154, 158);
+    --default-spacing: 15px;
+    --header-background-color: black;
+    --linked-in-primary-logo-color: #0077B5;
+    --stack-overflow-primary-logo-color: #F48024;
+    --stack-overflow-secondary-logo-color: #BCBBBB;
+}
+
+body {
+    background-color: var(--37signals-secondary-text-color);
+    padding: 25px;
+}
+
+header {
+    background-color: var(--header-background-color);
+    color: var(--37signals-primary-text-color);
+    font-family: "Lab Grotesque", sans-serif;
+    font-feature-settings: "liga", "ss02";
+    height: 105px;
+    margin: auto;
+    padding: 10px var(--default-spacing);
+}
+
+main {
+    background-color: var(--37signals-primary-text-color);
+    margin: auto;
+    width: 820px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+section {
+    padding: 0 var(--default-spacing);
+    font-size: 14px;
+}
+
+footer {
+    padding: 0 var(--default-spacing) var(--default-spacing) var(--default-spacing);
+}
+/* '\33 ' = Unicode escape for 3*/
+/*#\33 7signals-logo {*/
+/*    margin: unset;*/
+/*}*/
+
+
+#contact-info {
+    font-size: 14px;
+}
+
+#footnotes h5, #signals h5 {
+    margin: 5px 0 0 0;
+}
+
+#footnotes ol, #signals ol {
+    font-size: 12px;
+    margin: unset;
+}
+
+#linked-in-logo:hover path {
+  fill: var(--linked-in-primary-logo-color);
+}
+
+#position-link {
+    color: var(--37signals-secondary-text-color);
+    margin: 0 var(--default-spacing);
+    text-decoration: none;
+}
+
+#position-link:hover {
+    color: var(--37signals-primary-text-color);
+}
+
+#social-links {
+    font-size: 12px;
+    justify-content: flex-end;
+}
+
+#stack-overflow-logo:hover path {
+    fill: var(--stack-overflow-primary-logo-color);
+}
+
+#stack-overflow-logo:hover polygon {
+    fill: var(--stack-overflow-secondary-logo-color);
+}
+
+#sub-title {
+    margin: unset;
+}
+
+#title {
+    align-items: center;
+}
+
+#title h3 {
+    justify-content: space-between;
+    margin: unset;
+    width: fit-content;
+}
+
+.center-contents-vertically {
+    display: flex;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flipper-logo {
+    height: 30px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%
+}
+
+
+.link {
+    color: var(--37signals-secondary-text-color);
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--37signals-primary-text-color);
+}
+
+.link:hover {
+    color: var(--37signals-primary-text-color);
+}
+
+.link:not(:last-child) {
+    margin-right: var(--default-spacing);
+}
+
+.link span {
+    align-content: center;
+}
+
+.link svg {
+    margin-right: 10px;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
