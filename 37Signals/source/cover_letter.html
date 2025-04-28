@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="cover-letter.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
 </head>
 <body>
 <main id="cover-letter">
@@ -76,14 +75,14 @@
     </section>
     <section id="overview">
         <p>
-            I have a very non-traditional career path that has lead me to have very unique experiences with problem solving and efficiency.
+            I have a non-traditional career path that has lead me to have very unique experiences with problem solving and efficiency.
             Initially my calling was to be an Interior Trim Carpenter.
             Immediately after high school, I ran my own business, trimming entire 5000+ sqft homes on my own.
             Through the power of decomposition, jigs and learning from previous experiences, I was able to be faster, have a higher quality and charge less than most crews.
             I started teaching myself HTML and CSS to build a website for my business.
             However, I needed to leave the industry after I developed allergies to the woods I was working with.
         </p><p>
-            I left Carpentry and joined the US Navy as a Reactor Chemist on Submarines, where I was responsible for independently supervising the radiological safety of the crew and for daily sampling, recording, and reporting of Reactor Chemistry to the Command.
+            I left carpentry and joined the US Navy as a Reactor Chemist on Submarines, where I was responsible for independently supervising the radiological safety of the crew and for daily sampling, recording, and reporting of Reactor Chemistry to the Command.
             I saw inefficiencies in manually creating the required documentation so I started learning Excel formulas and VBA to help automate the data analytics and reporting.
             Within my first year, I was honored as Junior Sailor of the Quarter for boosting the morale of the crews of a visiting Australian submarine and my ship, while excelling in my managerial abilities.
         </p><p>
@@ -135,43 +134,7 @@
             </div>
         </div>
     </section>
-    <footer>
-<!--        <script>-->
-<!--            function generatePDF() {-->
-<!--                // console.log("called generatePDF cover-letter.js");-->
-<!--                const element = document.getElementById('_cover-letter');-->
-<!--                const opt = {-->
-<!--                    margin:       0,-->
-<!--                    filename:     '_cover-letter.pdf',-->
-<!--                    html2canvas:  { scale: 3 },-->
-<!--                    pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] },-->
-<!--                    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }-->
-<!--                };-->
-
-<!--                replaceSvgCssVars(document.querySelector('#stack-overflow-logo'));-->
-<!--                html2pdf().set(opt).from(element).save();-->
-<!--            }-->
-
-<!--            function replaceSvgCssVars(element) {-->
-<!--                const svgs = element.querySelectorAll('svg *');-->
-
-<!--                svgs.forEach(el => {-->
-<!--                    ['fill', 'stroke', 'color'].forEach(attr => {-->
-<!--                        const val = el.getAttribute(attr);-->
-<!--                        if (val && val.startsWith('var(')) {-->
-<!--                            const cssVarName = val.slice(4, -1).trim();-->
-<!--                            const realColor = getComputedStyle(el).getPropertyValue(cssVarName).trim();-->
-<!--                            if (realColor) {-->
-<!--                                el.setAttribute(attr, realColor);-->
-<!--                            }-->
-<!--                        }-->
-<!--                    });-->
-<!--                });-->
-<!--            }-->
-<!--        </script>-->
-    </footer>
+    <footer></footer>
 </main>
-<button onclick="generatePDF()">Generate PDF</button>
-<script src="cover-letter.js"></script>
 </body>
 </html>
