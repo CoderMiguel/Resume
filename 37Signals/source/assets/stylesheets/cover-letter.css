@@ -1,16 +1,29 @@
 :root {
     --37signals-primary-text-color: white;
     --37signals-secondary-text-color: rgb(150, 154, 158);
+    --body-background-color: whitesmoke;
     --default-spacing: 15px;
+    --double-spacing: calc(var(--default-spacing) * 2);
     --header-background-color: black;
     --linked-in-primary-logo-color: #0077B5;
     --stack-overflow-primary-logo-color: #F48024;
     --stack-overflow-secondary-logo-color: #BCBBBB;
 }
 
+address:hover path {
+    fill: orangered;
+}
+
 body {
-    background-color: var(--37signals-secondary-text-color);
+    background-color: darkgrey;
+    color: black;
+    font-family: "Lab Grotesque", sans-serif;
+    font-feature-settings: "liga", "ss02";
     padding: 25px;
+}
+
+footer {
+    padding: 0 var(--default-spacing) var(--default-spacing) var(--default-spacing);
 }
 
 header {
@@ -20,7 +33,11 @@ header {
     font-feature-settings: "liga", "ss02";
     height: 105px;
     margin: auto;
-    padding: 10px var(--default-spacing);
+    padding: 10px calc(var(--default-spacing)*1.5);
+}
+
+header .role {
+    margin: unset;
 }
 
 main {
@@ -34,18 +51,29 @@ p {
 }
 
 section {
-    padding: 0 var(--default-spacing);
+    padding: 0 var(--double-spacing);
     font-size: 14px;
 }
 
-footer {
-    padding: 0 var(--default-spacing) var(--default-spacing) var(--default-spacing);
+sup a {
+    /*text-decoration: none;*/
+    margin-left: 2px;
 }
-/* '\33 ' = Unicode escape for 3*/
-/*#\33 7signals-logo {*/
-/*    margin: unset;*/
-/*}*/
 
+ /*'\33 ' = Unicode escape for 3*/
+#\33 7signals-logo {
+    fill: black;
+    height: 30px;
+    margin-right: calc(var(--default-spacing)/2);
+}
+
+#closing :first-child {
+    margin-top: unset;
+}
+
+#closing :last-child {
+    margin-bottom: unset;
+}
 
 #contact-info {
     font-size: 14px;
@@ -60,8 +88,37 @@ footer {
     margin: unset;
 }
 
+/*#intro {*/
+/*    background-color: #F48024;*/
+/*}*/
+
+#intro p {
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
 #linked-in-logo:hover path {
   fill: var(--linked-in-primary-logo-color);
+}
+
+#name {
+    margin-bottom: calc(var(--default-spacing)/2);
+    margin-top: unset;
+    text-align: center;
+}
+
+#overview {
+    background-color: var(--body-background-color);
+    padding: 5px var(--double-spacing);
+    /*padding-right: var(--double-spacing);*/
+}
+
+#overview :first-child {
+    margin-top: unset;
+}
+
+#overview :last-child {
+    margin-bottom: unset;
 }
 
 #position-link {
@@ -74,9 +131,18 @@ footer {
     color: var(--37signals-primary-text-color);
 }
 
+#signature {
+    margin: unset;
+}
+
 #social-links {
     font-size: 12px;
     justify-content: flex-end;
+}
+
+#source-link {
+    text-wrap: nowrap;
+    width: fit-content;
 }
 
 #stack-overflow-logo:hover path {
@@ -147,6 +213,10 @@ footer {
 
 .link svg {
     margin-right: 10px;
+}
+
+.margin-none {
+    margin: unset;
 }
 
 .space-between {

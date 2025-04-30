@@ -3,6 +3,8 @@
     --37signals-secondary-text-color: rgb(150, 154, 158);
     --body-background-color: whitesmoke;
     --default-spacing: 15px;
+    --double-spacing: calc(var(--default-spacing) * 2);
+    --half-spacing: calc(var(--default-spacing) / 2);
     --header-background-color: black;
     --linked-in-primary-logo-color: #0077B5;
     --stack-overflow-primary-logo-color: #F48024;
@@ -13,9 +15,9 @@ address {
     font-style: normal;
 }
 
-article:nth-of-type(even) {
-    background-color: var(--body-background-color);
-}
+/*article:nth-of-type(even) {*/
+/*    background-color: var(--body-background-color);*/
+/*}*/
 
 article:last-of-type {
     margin-bottom: 0
@@ -40,6 +42,7 @@ header {
 header .role {
     margin: unset;
 }
+
 header .role:after {
     content: unset;
 }
@@ -64,6 +67,12 @@ main {
     margin: unset;
 }
 
+#education {
+    background-color: var(--stack-overflow-secondary-logo-color);
+    margin-top: 5px;
+    padding: var(--half-spacing) var(--double-spacing);
+}
+
 #experience-summary {
     background-color: var(--stack-overflow-secondary-logo-color);
     padding: 0 calc(var(--default-spacing) * 2);
@@ -80,6 +89,10 @@ main {
     padding: var(--default-spacing) calc(var(--default-spacing) * 2);
 }
 
+#job-history article:first-of-type {
+    margin-top: 5px;
+}
+
 #links {
     height: 100%;
 }
@@ -92,6 +105,16 @@ main {
     margin-bottom: calc(var(--default-spacing) * 0.5);
     margin-top: unset;
     text-align: center;
+}
+
+#page-break-helper {
+    padding: unset;
+}
+
+#responsoft {
+    float: left;
+    position: relative;
+    top: -10px;
 }
 
 #responsoft-logo {
@@ -107,10 +130,6 @@ main {
     margin: unset;
 }
 
-#source-link {
-    margin: unset;
-}
-
 #stack-overflow-logo:hover path {
     fill: var(--stack-overflow-primary-logo-color);
 }
@@ -123,9 +142,9 @@ main {
     margin: unset;
 }
 
-#success-stories h3, #success-stories h4 {
-  margin: 0 calc(var(--default-spacing) * 2);
-}
+/*#success-stories h3, #success-stories h4 {*/
+/*  margin: 0 calc(var(--default-spacing) * 2);*/
+/*}*/
 
 #title {
     align-items: center;
@@ -174,16 +193,25 @@ main {
 }
 
 .job {
-    margin: var(--default-spacing) 0;
-    padding: 0 calc(var(--default-spacing) * 2);
+    margin: var(--half-spacing) 0;
+    padding: 0 var(--double-spacing);
 }
 
-    .job:last-of-type {
+.job:nth-of-type(even) {
+    background-color: var(--body-background-color);
+    padding: var(--half-spacing) var(--double-spacing)
+}
+
+.job:last-of-type {
     padding-bottom: 0;
 }
 
 .job-description {
     margin-left: 30px;
+}
+
+.job-description ul {
+    margin: unset;
 }
 
 .link {
@@ -236,7 +264,7 @@ header .link:hover {
 }
 
 .position {
-    margin: var(--default-spacing) var(--default-spacing) 0 0;
+    margin: var(--half-spacing) 0 0 0;
 }
 
 p.responsibilities {
