@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./cover-letter.css">
+</head>
+<body>
+<main id="code-example">
+    <section id="open_source">
+        <h3>Open Source</h3>
+        <h4>Recent Contributions</h4>
+        <article>
+            <ul>
+                <li>
+                    <strong><a href="https://github.com/rails/kredis">Kredis gem</a>:</strong>
+                    <ul>
+                        <li><span>Pull Request: <a href="https://github.com/rails/kredis/pull/160">Add the smove method to Kredis::Types::Set #160</a></span></li>
+                    </ul>
+                </li>
+                <li>
+                    <strong><a href="https://github.com/countries/countries">Countries gem</a>:</strong>
+                    <ul>
+                        <li><span>Issue: <a href="https://github.com/countries/countries/issues/863">method_missing throws an internal error in ISO3166::CountryFinderMethods.method_missing #863</a></span></li>
+                        <li><span>Pull Request: <a href="https://github.com/countries/countries/pull/866">method_missing throws an internal error in ISO3166::CountryFinderMethods.method_missing #866</a></span></li>
+                    </ul>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h4>In Progress: Extending <img class="flipper-logo" src="https://www.flippercloud.io/vite/assets/wordmark-DAO7s5pY.svg"></h4>
+            <div>
+                <p>
+                    We use Flipper and Flipper::UI to provide Feature Flags to the business as a way to toggle some pieces of functionality at their discretion, and without developer intervention.
+                    However, the current implementation of <a href="https://www.flippercloud.io/docs/instrumentation#subscribing-to-feature-operations">Flipper's Instrumentation</a> is stateless and broadcasts for every event of all features.
+                    This may work for the gem's general scope but for our use case I wanted to isolate our logic.  The results have been very effective and I will be breaking the extensions that I made into my first 3 gems:
+                </p>
+            </div>
+            <ol>
+                <li>
+                    <div>
+                        <h4>Custom Features</h4>
+                        The Open/Closed Principle inspired me to emulate Rails' Single Table Inheritance <a href="https://api.rubyonrails.org/classes/ActiveRecord/Inheritance/ClassMethods.html#method-i-compute_type"><code>sti_class_for(type_name)</code></a> method.
+                        This allowed us to inform and memoize new Custom Feature subclasses within Flipper and allow subscribers to only scribe to a specific feature's events.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h4>Feature State Changes</h4>
+                        Custom Feature subclasses then opened the door to introduce the ability to let subscribers subscribe to only a Feature's state change events.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h4>ActiveSupport Subscriber / Responder</h4>
+                        Feature State Change and Custom Feature subclasses together and individually provide options for subscribing only to the desired operation events of applicable Features, instead of all of them.
+                        This drastically reduces the number of events that a subscriber needs to parse, reducing complexity, while also encapsulating event response logic for reuse in other Features.
+                        Additionally, Feature subclasses also made it easy to organize and share ActiveSupport::Notifications subscription response objects with the desired Feature subclasses.
+                    </div>
+                </li>
+            </ol>
+        </article>
+    </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,58 @@
+:root {
+    --37signals-primary-text-color: white;
+    --37signals-secondary-text-color: rgb(150, 154, 158);
+    --body-background-color: whitesmoke;
+    --default-spacing: 15px;
+    --double-spacing: calc(var(--default-spacing) * 2);
+    --half-spacing: calc(var(--default-spacing) / 2);
+    --header-background-color: black;
+    --linked-in-primary-logo-color: #0077B5;
+    --stack-overflow-primary-logo-color: #F48024;
+    --stack-overflow-secondary-logo-color: #BCBBBB;
+}
+
+body {
+    background-color: darkgrey;
+    color: black;
+    font-family: "Lab Grotesque", sans-serif;
+    font-feature-settings: "liga", "ss02";
+    font-size: 14px;
+    padding: 25px;
+}
+
+main {
+    background-color: var(--37signals-primary-text-color);
+    margin: auto;
+    padding: var(--default-spacing) 50px var(--default-spacing) var(--double-spacing);
+    /*padding: var(--default-spacing) var(--double-spacing);*/
+    /*padding-right: 50px;*/
+    width: 750px;
+}
+
+#dhh_pr h4 {
+    margin-right: var(--default-spacing)
+}
+
+#intro p {
+    margin-bottom: 5px;
+}
+
+#prs h3, #prs ul {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.center-contents {
+    display: flex;
+    align-items: center;
+}
+
+.margin-none {
+    margin: unset;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%
+}
